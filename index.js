@@ -12,7 +12,11 @@ app.use(express.urlencoded({ extended: true}));
 app.use(express.static("public")); //não é exatamente sobre middleware, mas é importante para declaração da pasta public como referencia de assets
 //função teste
 app.get("/", (req, res) => {
-    res.send("Bem-vindo ao DasBuch!");
+    try{
+       return res.render("index.ejs");
+    }catch(err){
+        console.error(err.message);
+    };
   });
 //função escutadora
 app.listen(PORT, () => {

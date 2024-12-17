@@ -1,0 +1,8 @@
+:root, [data-bs-theme=light] {
+  --bs-body-font-family: Lora, serif;
+  --bs-link-color: #9a9a9a;
+  --bs-link-color-rgb: 154,154,154;
+  --bs-link-hover-color: #a6a6a6;
+  --bs-link-hover-color-rgb: 166,166,166;
+}
+

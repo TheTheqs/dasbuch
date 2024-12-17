@@ -1,5 +1,6 @@
 NodeJS(NPM)
 Express
 BodyParser
+EJS
 Axios
 Nodemon
