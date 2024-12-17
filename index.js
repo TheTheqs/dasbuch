@@ -35,6 +35,13 @@ app.get("/add", (req, res) => {
     };
 });
 
+app.get("/search", (req, res) => {
+    try{
+        return res.render("search.ejs");
+     }catch(err){
+         console.error(err.message);
+    };
+});
 //função escutadora
 app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
