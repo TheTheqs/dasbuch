@@ -50,6 +50,25 @@ app.get("/result", (req, res) => {
          console.error(err.message);
     };
 });
+//Função teste página de erro
+app.get("/error", (req, res) => {
+    try{
+        return res.render("error.ejs");
+     }catch(err){
+         console.error(err.message);
+    };
+});
+
+//Função teste página de contato
+app.get("/contact", (req, res) => {
+    try{
+        return res.render("contact.ejs");
+     }catch(err){
+         console.error(err.message);
+    };
+});
+
+
 //função escutadora
 app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
