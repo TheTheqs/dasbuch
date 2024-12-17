@@ -34,10 +34,18 @@ app.get("/add", (req, res) => {
          console.error(err.message);
     };
 });
-
+//Função teste página de busca
 app.get("/search", (req, res) => {
     try{
         return res.render("search.ejs");
+     }catch(err){
+         console.error(err.message);
+    };
+});
+//Função teste resultados da busca
+app.get("/result", (req, res) => {
+    try{
+        return res.render("results.ejs");
      }catch(err){
          console.error(err.message);
     };
