@@ -26,6 +26,14 @@ app.get("/detail", (req, res) => {
          console.error(err.message);
     };
 });
+//função teste formulário
+app.get("/add", (req, res) => {
+    try{
+        return res.render("form.ejs");
+     }catch(err){
+         console.error(err.message);
+    };
+});
 
 //função escutadora
 app.listen(PORT, () => {

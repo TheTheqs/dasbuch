@@ -1,34 +1,17 @@
-<!DOCTYPE html>
-<html data-bs-theme="light" lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>DasBuch</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora&amp;display=swap">
-    <link rel="stylesheet" href="assets/css/bs-theme-overrides.css">
-    <link rel="stylesheet" href="assets/css/Navbar-Centered-Brand-icons.css">
-</head>
-
-<body>
-    <%- include('partials/header') %>
-    <div class="card"><img class="card-img-top w-100 d-block">
-        <div class="card-body text-center">
-            <h4 class="card-title">This is my personal book review web page.</h4>
-            <p class="card-text">Olá, Matheqs aqui. Além de desenvolver softwares eu também sou apaixonado por livros, essa aplicação é uma união dessas duas paixões. Aqui você pode ler as minhas humildes opiniões literárias, adicionar novos reviews, editar ou deletar qualquer review existente e fazer buscas refinadas. Qualquer sugestão ou dúvida, basta entrar em contato!&nbsp;</p>
-        </div>
+<%- include('partials/header') %>
+<div class="card"><img class="card-img-top w-100 d-block">
+    <div class="card-body text-center">
+        <h4 class="card-title">This is my personal book review web page.</h4>
+        <p class="card-text">Olá, Matheqs aqui. Além de desenvolver softwares eu também sou apaixonado por livros, essa aplicação é uma união dessas duas paixões. Aqui você pode ler as minhas humildes opiniões literárias, adicionar novos reviews, editar ou deletar qualquer review existente e fazer buscas refinadas. Qualquer sugestão ou dúvida, basta entrar em contato!&nbsp;</p>
     </div>
-    <div class="card"></div>
-    <div class="card text-center d-flex justify-content-center align-items-center ms-0 ps-0">
-        <div class="card-header text-center ps-5 pe-5 ms-0 me-0 w-50 max-auto">
-            <h3 class="mb-0"><em>Book Title</em></h3>
-            <h5>0/5</h5>
-        </div>
-        <div class="card-body d-flex justify-content-between ms-0 w-50"><a href="#">Edit</a><a href="/detail">Details</a><a href="#">Delete</a></div>
+</div>
+<div class="card"></div>
+<div class="card text-center d-flex justify-content-center align-items-center ms-0 ps-0">
+    <div class="card-header text-center ps-5 pe-5 ms-0 me-0 w-50 max-auto">
+        <h3 class="mb-0"><em>Book Title</em></h3>
+        <h5>0/5</h5>
     </div>
+    <div class="card-body d-flex justify-content-between ms-0 w-50"><a href="#">Edit</a><a href="/detail">Details</a><a href="#">Delete</a></div>
+</div>
     <div class="card"></div>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-</body>
-
-</html>
+<%- include('partials/footer') %>
