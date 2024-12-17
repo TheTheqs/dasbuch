@@ -1,12 +1,12 @@
 <%- include('partials/header') %>
 <form action="/add" method="POST">
-    <div class="container d-flex flex-column align-items-center mb-4"><label class="form-label fs-4 mb-0"><span style="color: rgb(112, 118, 123);">Title</span></label><input type="text" class="w-50" required="" maxlength="50"><label class="form-label fs-4 pb-0 mb-0 mt-4"><span style="color: rgb(112, 118, 123);">Author</span></label><input type="text" class="w-50" required="" maxlength="50"><label class="form-label fs-4 pb-0 mb-0 mt-4"><span style="color: rgb(112, 118, 123);">Genre</span></label><input type="text" class="w-50" required="" maxlength="50"><label class="form-label fs-4 pb-0 mb-0 mt-4"><span style="color: rgb(112, 118, 123);">Commentary</span></label>
+    <div class="container d-flex flex-column align-items-center mb-5"><label class="form-label fs-4 mb-0"><span style="color: rgb(112, 118, 123);">Title</span></label><input type="text" class="w-50" required="" maxlength="50"><label class="form-label fs-4 pb-0 mb-0 mt-4"><span style="color: rgb(112, 118, 123);">Author</span></label><input type="text" class="w-50" required="" maxlength="50"><label class="form-label fs-4 pb-0 mb-0 mt-4"><span style="color: rgb(112, 118, 123);">Genre</span></label><input type="text" class="w-50" required="" maxlength="50"><label class="form-label fs-4 pb-0 mb-0 mt-4"><span style="color: rgb(112, 118, 123);">Commentary</span></label>
         <textarea class="w-50 pb-0 mb-0 pb-xl-0 mb-xl-0" 
         style="height: 150px;" 
         maxlength="200" 
         required></textarea>
         <div><label class="form-label fs-4 pb-0 mb-0 mt-4 me-3"><span style="color: rgb(112, 118, 123);">Score</span></label><input type="number" min="0" max="5" value="0" placeholder="0" required=""></div>
-        <div><label class="form-label fs-4 pb-0 mb-0 mt-4 me-3"><span style="color: rgb(112, 118, 123);">Date</span></label><input type="month" required=""></div><input class="btn btn-primary mt-3" type="submit" value="Send">
+        <div><label class="form-label fs-4 pb-0 mb-0 mt-4 me-3"><span style="color: rgb(112, 118, 123);">Date</span></label><input type="month" required=""></div><input class="btn btn-primary mt-3 mb-5" type="submit" value="Send">
     </div>
 </form>
 <%- include('partials/footer') %>
