@@ -1,12 +1,34 @@
 <%- include('partials/header') %>
-<form action="/add" method="POST">
-    <div class="container d-flex flex-column align-items-center mb-5"><label class="form-label fs-4 mb-0"><span style="color: rgb(112, 118, 123);">Title</span></label><input type="text" class="w-50" required="" maxlength="50"><label class="form-label fs-4 pb-0 mb-0 mt-4"><span style="color: rgb(112, 118, 123);">Author</span></label><input type="text" class="w-50" required="" maxlength="50"><label class="form-label fs-4 pb-0 mb-0 mt-4"><span style="color: rgb(112, 118, 123);">Genre</span></label><input type="text" class="w-50" required="" maxlength="50"><label class="form-label fs-4 pb-0 mb-0 mt-4"><span style="color: rgb(112, 118, 123);">Commentary</span></label>
-        <textarea class="w-50 pb-0 mb-0 pb-xl-0 mb-xl-0" 
-        style="height: 150px;" 
-        maxlength="200" 
-        required></textarea>
-        <div><label class="form-label fs-4 pb-0 mb-0 mt-4 me-3"><span style="color: rgb(112, 118, 123);">Score</span></label><input type="number" min="0" max="5" value="0" placeholder="0" required=""></div>
-        <div><label class="form-label fs-4 pb-0 mb-0 mt-4 me-3"><span style="color: rgb(112, 118, 123);">Date</span></label><input type="month" required=""></div><input class="btn btn-primary mt-3 mb-5" type="submit" value="Send">
+<form action="/add" method="POST" class="container mt-5 mb-5">
+    <h2 class="text-center mb-4">Adicionar Novo Review</h2>
+    <div class="mb-3">
+      <label for="title" class="form-label fs-5 text-secondary">Title</label>
+      <input type="text" id="title" name="title" class="form-control" maxlength="50" required>
+    </div>
+    <div class="mb-3">
+      <label for="author" class="form-label fs-5 text-secondary">Author</label>
+      <input type="text" id="author" name="author" class="form-control" maxlength="50" required>
+    </div>
+    <div class="mb-3">
+      <label for="genre" class="form-label fs-5 text-secondary">Genre</label>
+      <input type="text" id="genre" name="genre" class="form-control" maxlength="50" required>
+    </div>
+    <div class="mb-3">
+      <label for="commentary" class="form-label fs-5 text-secondary">Commentary</label>
+      <textarea id="commentary" name="commentary" class="form-control" rows="4" maxlength="200" required></textarea>
+    </div>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="score" class="form-label fs-5 text-secondary">Score</label>
+        <input type="number" id="score" name="score" class="form-control" min="0" max="5" value="0" required>
+      </div>
+      <div class="col-md-6">
+        <label for="date" class="form-label fs-5 text-secondary">Date</label>
+        <input type="month" id="date" name="date" class="form-control" required>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <input class="btn btn-primary px-4" type="submit" value="Send">
     </div>
 </form>
 <%- include('partials/footer') %>
