@@ -1,0 +1,5 @@
+NodeJS(NPM)
+Express
+BodyParser
+Axios
+Nodemon
