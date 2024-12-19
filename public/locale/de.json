@@ -1,4 +1,5 @@
 {
+    "CurrentLang":"de",
     "EN": "Englisch",
     "PT": "Portugiesisch",
     "DE": "Deutsch",
@@ -6,6 +7,7 @@
     "Home": "Startseite",
     "NewReview": "Neue Rezension",
     "Search": "Suche",
+    "Author":"Autor",
     "Contact": "Kontakt",
     "HomeGreeting": "Willkommen bei Das Buch! Ihre persönliche Buchbewertungserfahrung!",
     "HomeText": "Hallo, ich bin Matheqs! Neben der Softwareentwicklung bin ich auch leidenschaftlich an Büchern interessiert. Diese Anwendung ist die perfekte Kombination aus diesen beiden Leidenschaften. Hier können Sie meine bescheidenen Meinungen über Bücher lesen, neue Rezensionen hinzufügen, bestehende bearbeiten oder löschen und detaillierte Suchen durchführen. Wenn Sie Vorschläge oder Fragen haben, zögern Sie nicht, mich zu kontaktieren!",

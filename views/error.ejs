@@ -5,10 +5,9 @@
         <path d="M8 1a7 7 0 1 1 0 14A7 7 0 0 1 8 1Zm0 13a6 6 0 1 0 0-12 6 6 0 0 0 0 12ZM7.75 4.5a.75.75 0 1 1 1.5 0v4.5a.75.75 0 1 1-1.5 0V4.5ZM8 11.625a.875.875 0 1 1 0 1.75.875.875 0 0 1 0-1.75Z"/>
       </svg>
     </div>
-    <h1 class="display-4 text-secondary fw-bold mb-3">Ops! Algo deu errado.</h1>
+    <h1 class="display-4 text-secondary fw-bold mb-3"><%=translator.ErrorTitle%></h1>
     <p class="text-muted fs-5 mb-4">
-      A página que você está procurando não foi encontrada.  
-      Talvez ela tenha sido movida ou o endereço está incorreto.
+      <%=translator.ErrorDesc%>
     </p>
   </div>
 <%- include('partials/footer') %>

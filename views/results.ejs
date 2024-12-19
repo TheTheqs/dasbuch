@@ -1,13 +1,13 @@
 <%- include('partials/header') %>
 <div class="container mt-2 d-flex flex-column align-items-center gap-2">
-    <h4 class="card-title">Search Results</h4>
+    <h4 class="card-title"><%=translator.Result%></h4>
     <div class="d-flex justify-content-center gap-3 align-items-center">
       <select class="form-select form-select-sm w-auto" id="organizarPor">
-        <option value="nome" selected>Nome</option>
-        <option value="autor">Autor</option>
-        <option value="genero">Gênero</option>
-        <option value="nota">Nota</option>
-        <option value="data">Data</option>
+        <option value="nome" selected><%=translator.Title%></option>
+        <option value="autor"><%=translator.Author%></option>
+        <option value="genero"><%=translator.Genre%></option>
+        <option value="nota"><%=translator.Score%></option>
+        <option value="data"><%=translator.Date%></option>
       </select>
       <button id="toggleOrder" class="btn btn-outline-primary btn-sm d-flex align-items-center"><i class="bi bi-arrow-up ms-1"></i>
       </button>
@@ -22,9 +22,9 @@
                 <span class="text-secondary">Maio/2024</span>
             </div>
             <div class="d-flex justify-content-around border-top pt-2">
-                <a href="/add" class="btn btn-sm btn-outline-primary">Edit</a>
-                <a href="/detail" class="btn btn-sm btn-outline-secondary">Details</a>
-                <a href="#" class="btn btn-sm btn-outline-danger">Delete</a>
+                <a href="/add" class="btn btn-sm btn-outline-primary"><%=translator.Edit%></a>
+                <a href="/detail" class="btn btn-sm btn-outline-secondary"><%=translator.Details%></a>
+                <a href="#" class="btn btn-sm btn-outline-danger"><%=translator.Delete%></a>
             </div>
             </div>
         </div>

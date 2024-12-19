@@ -1,4 +1,5 @@
 {
+    "CurrentLang":"en",
     "EN":"English",
     "PT":"Portuguese",
     "DE":"German",
@@ -6,6 +7,7 @@
     "Home":"Home",
     "NewReview":"New Review",
     "Search":"Search",
+    "Author":"Author",
     "Contact":"Contact",
     "HomeGreeting":"Welcome to Das Buch! Your Personalized Book Review Experience!",
     "HomeText":"Hello, Matheqs here! In addition to developing software, I’m also passionate about books. This application is the perfect fusion of these two passions. Here, you can read my humble literary opinions, add new reviews, edit or delete any existing ones, and perform refined searches. If you have any suggestions or questions, feel free to get in touch!",

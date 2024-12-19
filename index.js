@@ -2,10 +2,13 @@
 import express from "express"; //framework principal
 import bodyParser from "body-parser"; // middleware para requisições
 import pg from "pg"; //banco de dados
+import { Translator } from "./locale.js";
 
 const app = express(); //declaração da variável de servidor
 const PORT = 3000; //declaração da porta a ser usada. Uso 3000 por padrão.
-
+//Campo dedicado à internacionalização
+const tr = new Translator('en'); //inicia com a linguagem em inglês por padrão
+await tr.applyLanguage('en');
 //configuralção dos middlewares
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true}));
@@ -13,7 +16,9 @@ app.use(express.static("public")); //não é exatamente sobre middleware, mas é
 //função teste homepage
 app.get("/", (req, res) => {
     try{
-       return res.render("index.ejs");
+       return res.render("index.ejs",{
+        translator: tr.currentDic,
+       });
     }catch(err){
         console.error(err.message);
     };
@@ -21,7 +26,9 @@ app.get("/", (req, res) => {
 //função teste detalhes
 app.get("/detail", (req, res) => {
     try{
-        return res.render("detail.ejs");
+        return res.render("detail.ejs",{
+            translator: tr.currentDic,
+           });
      }catch(err){
          console.error(err.message);
     };
@@ -29,7 +36,9 @@ app.get("/detail", (req, res) => {
 //função teste formulário
 app.get("/add", (req, res) => {
     try{
-        return res.render("form.ejs");
+        return res.render("form.ejs",{
+            translator: tr.currentDic,
+           });
      }catch(err){
          console.error(err.message);
     };
@@ -37,7 +46,9 @@ app.get("/add", (req, res) => {
 //Função teste página de busca
 app.get("/search", (req, res) => {
     try{
-        return res.render("search.ejs");
+        return res.render("search.ejs",{
+            translator: tr.currentDic,
+           });
      }catch(err){
          console.error(err.message);
     };
@@ -45,7 +56,9 @@ app.get("/search", (req, res) => {
 //Função teste resultados da busca
 app.get("/result", (req, res) => {
     try{
-        return res.render("results.ejs");
+        return res.render("results.ejs",{
+            translator: tr.currentDic,
+           });
      }catch(err){
          console.error(err.message);
     };
@@ -53,7 +66,9 @@ app.get("/result", (req, res) => {
 //Função teste página de erro
 app.get("/error", (req, res) => {
     try{
-        return res.render("error.ejs");
+        return res.render("error.ejs",{
+            translator: tr.currentDic,
+           });
      }catch(err){
          console.error(err.message);
     };
@@ -62,11 +77,14 @@ app.get("/error", (req, res) => {
 //Função teste página de contato
 app.get("/contact", (req, res) => {
     try{
-        return res.render("contact.ejs");
+        return res.render("contact.ejs",{
+            translator: tr.currentDic,
+           });
      }catch(err){
          console.error(err.message);
     };
 });
+//Endpoints para utilidade
 
 
 //função escutadora
