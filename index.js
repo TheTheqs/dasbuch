@@ -85,7 +85,15 @@ app.get("/contact", (req, res) => {
     };
 });
 //Endpoints para utilidade
-
+app.get("/lang/:lng", async (req, res) => { //mudança de idioma, anexado ao footer de toda página, requisição por botão.
+    const { lng } = req.params;
+    try{
+        await tr.applyLanguage(lng);
+        res.status(200).send('You have changed the language succesfully');
+     }catch(err){
+         console.error(err.message);
+    };
+});
 
 //função escutadora
 app.listen(PORT, () => {

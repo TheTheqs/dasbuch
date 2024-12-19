@@ -31,17 +31,20 @@
     </div>
 </div>
 <footer class="bg-light fixed-bottom py-2">
-    <div class="container d-flex justify-content-center gap-3">
-      <button class="btn btn-sm btn-outline-secondary">
-        <img src="https://flagcdn.com/w40/br.png" alt="Brasil" width="24" height="16">
-      </button>
-      <button class="btn btn-sm btn-outline-secondary">
-        <img src="https://flagcdn.com/w40/us.png" alt="Estados Unidos" width="24" height="16">
-      </button>
-      <button class="btn btn-sm btn-outline-secondary">
-        <img src="https://flagcdn.com/w40/de.png" alt="Alemanha" width="24" height="16">
-      </button>
-    </div>
+  <div class="container d-flex justify-content-center gap-3">
+    <button class="btn btn-sm btn-outline-secondary" data-lang='pt'>
+      <img src="https://flagcdn.com/w40/br.png" alt="Brasil" width="24" height="16">
+    </button>
+    <button class="btn btn-sm btn-outline-secondary" data-lang='el'>
+      <img src="https://flagcdn.com/w40/gr.png" alt="Grécia" width="24" height="16">
+    </button>
+    <button class="btn btn-sm btn-outline-secondary" data-lang='en'>
+      <img src="https://flagcdn.com/w40/us.png" alt="Estados Unidos" width="24" height="16">
+    </button>
+    <button class="btn btn-sm btn-outline-secondary" data-lang='de'>
+      <img src="https://flagcdn.com/w40/de.png" alt="Alemanha" width="24" height="16">
+    </button>
+  </div>
 </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
@@ -53,6 +56,21 @@
       isAscending = !isAscending;
       icon.className = isAscending ? 'bi bi-arrow-up ms-1' : 'bi bi-arrow-down ms-1';
     });
+  </script>
+  <script>
+    document.querySelectorAll('button[data-lang]').forEach(button => {
+        button.addEventListener('click', async (event) => {
+            const lang = event.target.closest('button').getAttribute('data-lang');
+            try {
+              await fetch(`/lang/${lang}`);
+              if (response.ok) {
+                window.location.reload();
+              }
+            } catch (err) {
+                console.error('Erro ao mudar o idioma:', err);
+            }
+        });
+      });
   </script>
 </body>
 </html>
